@@ -5,6 +5,7 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from helper.database import *
 import os
+from os import environ
 import random
 from PIL import Image
 import time
