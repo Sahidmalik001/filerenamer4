@@ -59,5 +59,4 @@ async def root_route_handler(request):
 
 
     
-
-    bot.run()
+bot.run()
