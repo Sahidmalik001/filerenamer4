@@ -60,5 +60,5 @@ if STRING:
 
 
 
-    
-bot.run()
+else:    
+    bot.run()
