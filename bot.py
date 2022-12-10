@@ -30,15 +30,7 @@ bot = Client(
            api_hash=API_HASH,
 
            plugins=dict(root='plugins'))
-           
 
-if STRING:
-    apps = [Client2,bot]
-    for app in apps:
-        app.start()
-    idle()
-    for app in apps:
-        app.stop()
     app = web.AppRunner(await web_server())
     await app.setup()
     bind_address = "0.0.0.0"
@@ -53,6 +45,16 @@ routes = web.RouteTableDef()
 @routes.get("/", allow_head=True)
 async def root_route_handler(request):
     return web.json_response("testbot")
+           
+
+if STRING:
+    apps = [Client2,bot]
+    for app in apps:
+        app.start()
+    idle()
+    for app in apps:
+        app.stop()
+
 
        
 
