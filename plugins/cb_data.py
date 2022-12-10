@@ -16,13 +16,15 @@ from helper.set import escape_invalid_curly_brackets
 
 log_channel = int(os.environ.get("LOG_CHANNEL", ""))
 
+PORT = environ.get("PORT", "8080")
+
 API_ID = int(os.environ.get("API_ID", ""))
 
 API_HASH = os.environ.get("API_HASH", "")
 
 STRING = os.environ.get("STRING", "")
 
-app = Client("test", api_id=API_ID, api_hash=API_HASH, session_string=STRING)
+app = Client("test", api_id=API_ID, api_hash=API_HASH, port=PORT, session_string=STRING)
 
 @Client.on_callback_query(filters.regex('cancel'))
 async def cancel(bot,update):
